@@ -53,6 +53,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'djangobackend.urls'
+ROOT_URLCONF = 'djangoapp.urls'
 
 TEMPLATES = [
     {
