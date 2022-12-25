@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Registration</title>
-    {% load static %}
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Contact Us</title>
+        {% load static %}
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    </head>
+
     <body>
 
+        <!--Add a nav bar here -->
         <nav class="navbar navbar-light bg-light">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -38,30 +40,19 @@
             </div>
         </nav>
 
-        <!--Add a registration form here -->     
-        <form action="{% url 'djangoapp:registration' %}" method="post">
-            <div class="container">
-                {% csrf_token %}
-                <h1>Sign Up</h1>
-                <hr>
-                <div class="form-group">
-                    <label for="username"><b>User Name</b></label>
-                    <input type="text" class="form-control" placeholder="Enter User Name: " name="username" required>
-                    <label for="firstname"><b>First Name</b></label>
-                    <input type="text" class="form-control" placeholder="Enter First Name: " name="firstname" required>
-                    <label for="lastname"><b>Last Name</b></label>
-                    <input type="text" class="form-control" placeholder="Enter Last Name: " name="lastname" required>
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" class="form-control" placeholder="Enter Password: " name="psw" required>
-                    {% if message %}
-                    <div class="alert alert-warning">
-                        {{ message }}
-                    </div>
-                    {% endif %}
-                    <button class="btn btn-primary" type="submit">Sign up</button>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <address>
+                        <strong>Best Cars</strong><br>
+                            5864 ABC Street 1 <br>
+                            Four Wheels, LA 478945<br>
+                        <abbr title="Phone">Phone:</abbr> (103) 456-7890
+                    </address>
                 </div>
             </div>
-        </form>
+        </div>
 
     </body>
+
 </html>

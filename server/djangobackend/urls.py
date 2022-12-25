@@ -19,8 +19,9 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('djangoapp/', include('djangoapp.urls')),
+    #path('djangobackend/', include('djangobackend.urls')),
+    path('admin/', admin.site.urls),
     #url(r'^$', views.index, name='index'),
     #path('https://siddiqueahme-8000.theiadocker-1.proxy.cognitiveclass.ai/djangoapp'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
